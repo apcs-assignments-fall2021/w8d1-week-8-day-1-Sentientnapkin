@@ -65,6 +65,8 @@ public class MyMain {
         System.out.println("Mathey.ceil tests");
         System.out.println(Mathey.ceil(2.5)); //3
         System.out.println(Mathey.ceil(3.4)); //4
+        System.out.println("Pythagorean Theorem");
+        System.out.println(Mathey.sqrt((double)(Mathey.pow(5,2)+Mathey.pow(12,2)))-(Mathey.sqrt((double)(Mathey.pow(5,2)+Mathey.pow(12,2)))%0.0001));
     }
 
 }
