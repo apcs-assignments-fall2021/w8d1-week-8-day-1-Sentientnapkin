@@ -8,7 +8,11 @@ public class Mathey {
      * public static ...
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static int max(int num1, int num2){
+        if (num1>=num2)
+            return num1;
+        else return num2;
+    }
 
 
 
@@ -16,7 +20,11 @@ public class Mathey {
      * Ex. max(1.2, 4.0) => 4.0
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static double max(double num1, double num2){
+        if (num1>=num2)
+            return num1;
+        else return num2;
+    }
 
 
 
@@ -24,7 +32,9 @@ public class Mathey {
      * Ex. max(1, 4, 2) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static int max(int num1,int num2,int num3){
+        return Mathey.max(Mathey.max(num1,num2),num3);
+    }
 
 
 
@@ -32,7 +42,9 @@ public class Mathey {
      * Ex. max(1.0, 4.25, 1.3, 2.1) => 4.25
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static double max(double num1, double num2, double num3, double num4){
+        return max(num1,max(num2,max(num3,num4)));
+    }
 
 
 
@@ -45,7 +57,9 @@ public class Mathey {
      *     randomInteger(1, 4) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static int randomInteger(int num1, int num2){
+        return (int)(Math.random()*(num2-num1)+num1);
+    }
 
 
 
@@ -57,7 +71,9 @@ public class Mathey {
      *     randomInteger(5) => 0
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static int randomInteger(int num){
+        return (int)(Math.random()*(num+1));
+    }
 
 
 
@@ -73,7 +89,13 @@ public class Mathey {
      *     pow(3, 4) => 81
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static int pow(int num,int power){
+        int total = 1;
+        for(int i = 0;i<power;i++){
+            total*=num;
+        }
+        return total;
+    }
 
 
 
@@ -83,7 +105,11 @@ public class Mathey {
      *     abs(-2) => 2
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static int abs(int num){
+        if(num<0)
+            num *= -1;
+        return num;
+    }
 
 
 
@@ -91,10 +117,12 @@ public class Mathey {
      * integer value that you get by rounding that double
      * You may assume that the integer is positive
      * Ex. round(2.4) => 2
-     *     round(2.5) => 2
+     *     round(2.5) => 3
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static int round(double num){
+        return (int)(num+0.5);
+    }
 
 
 
@@ -108,7 +136,9 @@ public class Mathey {
      *     floor(2.999999999999) => 2
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static int floor(double num){
+        return (int)(num);
+    }
 
 
 
@@ -122,7 +152,9 @@ public class Mathey {
      *     ceil(3.01) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static int ceil(double num){
+        return (int)(num+1);
+    }
 
 
 
